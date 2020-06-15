@@ -1,10 +1,13 @@
 const dbRouter = require('./config/db-router.config.js');
 const mysql = require('mysql');
+const config = require('./config/env.config.js');
 
 function Router() {
 
     this.route = function (app, method, request, response) {
-        const path = request.params[0];
+        let path = request.params[0];
+        if (config.path.length > 0)
+            path = path.replace(config.path, '');
         let data = {};
         if (method == 'GET' || method == 'DELETE') {
             for (let d in request.query) {
@@ -41,6 +44,7 @@ function Router() {
 
     this.execute = async function (query, data) {
         const q = mysql.format(query, data);
+        //console.log(q);
         const queryResult = await global.__db__.query(q);
         if (queryResult.error)
             return JSON.stringify({ error: queryResult.error });

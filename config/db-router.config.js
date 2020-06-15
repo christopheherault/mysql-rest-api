@@ -12,6 +12,19 @@ module.exports = {
     }
     ,
 
+    '/cdts-grp':
+    {
+        'GET': 'SELECT * FROM cdt WHERE  ? ORDER BY date DESC',
+    }
+    ,
+
+    '/cdt': {
+        'GET': 'SELECT * FROM cdt WHERE ?',
+        'DELETE': 'DELETE FROM cdt WHERE ?',
+        'POST': 'INSERT INTO cdt SET ?',
+        'PUT': 'REPLACE INTO cdt SET ?',
+    },
+
     '/tests':
     {
         'GET': 'SELECT * FROM test1 ',
