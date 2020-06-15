@@ -1,0 +1,37 @@
+POST http://localhost:3600/test2 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "dsddsds",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+GET http://localhost:3600/cdts?groupe=2DE4 HTTP/1.1
+
+###
+
+PUT http://localhost:3600/cdts HTTP/1.1
+content-type: application/json
+
+{
+    "id" : 1,
+    "content": "il y des élèves dans l'école $\\dfrac{3}{4}$"
+}
+
+###
+
+GET http://localhost:3600/groupes HTTP/1.1
+
+###
+
+POST http://localhost:3600/cdts HTTP/1.1
+content-type: application/json
+
+{
+    "content": "",
+    "color": "blue",
+    "date":"2020-06-12",
+    "groupe":"2DE4"
+}

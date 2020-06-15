@@ -1,0 +1,18 @@
+{
+  "name": "mysql-rest-api",
+  "version": "1.0.0",
+  "description": "Mysql Rest Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christophe Hérault",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "mysql": "^2.18.1"
+  }
+}
