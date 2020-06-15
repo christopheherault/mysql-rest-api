@@ -1,4 +1,17 @@
 module.exports = {
+
+    '/tests':
+    {
+        'GET': 'SELECT * FROM test1 ',
+    }
+    ,
+
+    '/test': {
+        'GET': 'SELECT * FROM test1 WHERE ?',
+        'DELETE': 'DELETE FROM test1 WHERE ?',
+        'POST': 'INSERT INTO test1 SET ?',
+        'PUT': 'REPLACE INTO test1 SET ?',
+    },
     route: async function (method, path, data) {
         if (path == '/test') {
             const queryResult = await global.__db__.query('SELECT * FROM test1');

@@ -1,9 +1,45 @@
+GET http://localhost:3600/test?id=2 HTTP/1.1
+content-type: application/json
+
+
+###
+
+GET http://localhost:3600/tests HTTP/1.1
+content-type: application/json
+
+
+###
+
 POST http://localhost:3600/test HTTP/1.1
 content-type: application/json
 
 {
-    "name": "dsddsds",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "content": "dsddsds",
+    "date" : "2020-06-14",
+    "num" : 19,
+    "name" : "test2"
+
+}
+
+
+###
+
+DELETE http://localhost:3600/test?id=2 HTTP/1.1
+content-type: application/json
+
+
+###
+
+PUT http://localhost:3600/test HTTP/1.1
+content-type: application/json
+
+{
+    "content": "aaaaaa",
+    "date" : "2020-06-14",
+    "num" : 30,
+    "name" : "test2",
+    "id" : 2
+
 }
 
 ###
