@@ -6,6 +6,12 @@ module.exports = {
     }
     ,
 
+    '/cdts':
+    {
+        'GET': 'SELECT * FROM cdt ',
+    }
+    ,
+
     '/tests':
     {
         'GET': 'SELECT * FROM test1 ',
