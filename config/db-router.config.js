@@ -1,5 +1,11 @@
 module.exports = {
 
+    '/groupes':
+    {
+        'GET': 'SELECT * FROM grp ',
+    }
+    ,
+
     '/tests':
     {
         'GET': 'SELECT * FROM test1 ',
