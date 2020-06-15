@@ -1,2 +1,2 @@
 # mysql-rest-api
-Mysl Rest API
+Mysql Rest API est un projet personnel pour la gestion d'une base de données avec une Api Rest
